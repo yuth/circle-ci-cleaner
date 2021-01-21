@@ -4,8 +4,8 @@ describe("Long running test", () => {
   test("should pass", async () => {
     await (() => {
       return new Promise((resolve) => {
-        setTimeout(() => resolve(undefined), 5 * MINUTES);
-        expect(true).toBeTruthy();
+        setTimeout(() => resolve(undefined), 0.1 * MINUTES);
+        expect(false).toBeTruthy();
       });
     })();
   });
