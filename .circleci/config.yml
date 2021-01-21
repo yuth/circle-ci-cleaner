@@ -31,6 +31,10 @@ jobs:
       - run:
           name: Run tests
           command: npm test
+      - run:
+          name: Clean up on failure
+          when: on_fail
+          command: echo "clean up on failure"
 
 workflows:
   # Below is the definition of your workflow.
